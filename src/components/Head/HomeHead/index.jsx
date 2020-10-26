@@ -15,7 +15,7 @@ let HomeHead = function (props) {
                 <img src="./img/cake.png" alt=""/>
             </div>
             <div className="search">
-                <span className="iconfont">&#xe620;</span>
+                <span className="iconfont">&#xe600;</span>
             </div>
             <div className="mine"></div>
         </div >
