@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Route, Redirect, Switch, Link, NavLink, withRouter } from 'react-router-dom';
-import {HomeOutlined,UserOutlined,ShoppingCartOutlined} from '@ant-design/icons'
+// import {HomeOutlined,UserOutlined,ShoppingCartOutlined} from '@ant-design/icons'
 
 // import { Layout,Menu,Row,Col,Button } from 'antd';
 
@@ -13,6 +13,7 @@ import Login from './views/Login'
 import Potfoods from './views/Potfoods'
 import Reg from './views/Reg'
 import './App.scss'
+import './assets/fonts/iconfont'
 
 
 @withRouter

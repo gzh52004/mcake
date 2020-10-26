@@ -15,9 +15,7 @@ let HomeHead = function (props) {
                 <img src="./img/cake.png" alt=""/>
             </div>
             <div className="search">
-                {/* <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-sousuo"></use>
-                </svg> */}
+                <span className="iconfont">&#xe620;</span>
             </div>
             <div className="mine"></div>
         </div >
