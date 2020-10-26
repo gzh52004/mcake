@@ -1,0 +1,23 @@
+{
+  "id": "2157814",
+  "name": "cake",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4691064",
+      "name": "菜单",
+      "font_class": "toggle",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "14658880",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    }
+  ]
+}

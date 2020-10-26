@@ -1,0 +1,33 @@
+@import '../../../assets/scss/common.scss';
+
+.header{
+    height: vw(122);
+    display: flex;
+    align-items: center;
+    border-bottom: vw(1) solid #f3eded;
+    .beijing{
+        display: flex;
+        flex: 2;
+        justify-content: flex-end;
+        .text{
+            font-size: vw(30);
+            color: #c6c6c6;
+            // flex: 6;
+        }
+    }
+    .picture{
+        flex: 6;
+        display: flex;
+        justify-content: center;
+        img{
+            height: vw(28);
+            
+        }
+    }
+    .search{
+        flex: 1
+    }
+    .mine{
+        flex: 1
+    }
+}
