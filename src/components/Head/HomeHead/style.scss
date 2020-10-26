@@ -1,22 +1,13 @@
 @import '../../../assets/scss/common.scss';
-
-@font-face {
-    font-family: 'iconfont';
-    src: url('@/assets/fonts/iconfont.eot');
-    src: url('@/assets/fonts/iconfont.eot?#iefix') format('embedded-opentype'),
-        url('@/assets/fonts/iconfont.woff2') format('woff2'),
-        url('@/assets/fonts/iconfont.woff') format('woff'),
-        url('@/assets/fonts/iconfont.ttf') format('truetype'),
-        url('@/assets/fonts/iconfont.svg#iconfont') format('svg');
-  }
-  .iconfont {
-    font-family: "iconfont" !important;
-    font-size: 16px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+@import '@/assets/fonts/iconfont.css';
+.iconfont{
+    color: #c6c6c6;
+    font-size: vw(40);
+}
 .header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
     height: vw(122);
     display: flex;
     align-items: center;
@@ -28,7 +19,12 @@
         .text{
             font-size: vw(30);
             color: #c6c6c6;
-            // flex: 6;
+        }
+        .icon-location{
+            line-height: vw(35);
+        }
+        .icon-location::before{
+            font-size: vw(30);
         }
     }
     .picture{
@@ -41,13 +37,19 @@
         }
     }
     .search{
-        flex: 1
-        span{
-            // font-size: vw(20);
-        }
-        
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .shuxian{
+        font-size: vw(1);
+        color: #f3eded;
     }
     .mine{
-        flex: 1
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        padding-right: vw(20);
+        font-size: vw(80);
     }
 }
