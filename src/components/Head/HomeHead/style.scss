@@ -7,11 +7,13 @@
 .header{
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: vw(750);
+    box-sizing: border-box;
     height: vw(122);
     display: flex;
     align-items: center;
     border-bottom: vw(1) solid #f3eded;
+    background-color: #fff;
     .beijing{
         display: flex;
         flex: 2;
@@ -42,6 +44,7 @@
         justify-content: center;
     }
     .shuxian{
+        // position: absolute;
         font-size: vw(1);
         color: #f3eded;
     }
@@ -49,7 +52,8 @@
         flex: 1;
         display: flex;
         justify-content: center;
-        padding-right: vw(20);
+        // padding-right: vw(20);
         font-size: vw(80);
+        box-sizing: border-box;
     }
 }

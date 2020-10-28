@@ -1,10 +1,6 @@
-@import './assets/scss/common.scss';
+@import '@/assets/scss/common.scss';
 
 $mainColor:black;
- * {
-    overflow: hidden;
-    // box-sizing: border-box;
-}
 .active{
     color:$mainColor;
     // font-size: vw(40);
@@ -17,7 +13,6 @@ $mainColor:black;
     // flex: 1;
     width: 100vw;
     height: vw(100);
-    border-top: vw(1) solid rgb(175, 174, 174);
     li{
         flex: 1;
         display: flex;
