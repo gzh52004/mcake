@@ -1,0 +1,80 @@
+blockquote,
+body,
+dd,
+dir,
+dl,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+input,
+legend,
+menu,
+ol,
+optgroup,
+p,
+pre,
+tbody,
+td,
+textarea,
+tfoot,
+th,
+thead,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+li {
+  list-style: none;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+* {
+  overflow: hidden;
+}
+
+.active {
+  color: black;
+  font-weight: 700;
+}
+
+.tarbar {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100vw;
+  height: 13.33333vw;
+}
+
+.tarbar li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

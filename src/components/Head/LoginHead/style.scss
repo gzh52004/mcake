@@ -1,11 +1,11 @@
-
+@import '../../../assets/scss/common.scss';
 @function vw($n) {
   // 如果效果图是750，就除以750;
   @return ($n * 100 / 750) + vw;
 }
 .header {
   height: vw(126);
-  width: 100%;
+  width: vw(750);
   display: flex;
   // flex-direction: column;
   // background-color:red;

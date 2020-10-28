@@ -19,7 +19,7 @@ class Header extends React.Component{
             <img className="headerLeft_img" src="../img/LoginHead/header_log.png" />
           </NavLink>
           <div className="headerRight">
-            <NavLink to="">
+            <NavLink to="/Cart">
               <img src="../img/LoginHead/header_cart.png" />
             </NavLink>
             <span>|</span>
