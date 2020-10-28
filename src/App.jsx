@@ -12,6 +12,8 @@ import Home from './views/Home'
 import Login from './views/Login'
 import Potfoods from './views/Potfoods'
 import Reg from './views/Reg'
+import Details from './views/Details'
+import My from './views/My'
 import './App.scss'
 import './assets/fonts/iconfont'
 
@@ -57,13 +59,13 @@ class App extends React.Component {
         const{ menu } = this.state;
         return (
             <div>
-                <nav>
+                {/* <nav>
                     <ul className="tarbar">
                         {
                             menu.map(item=><li key={item.name}> <NavLink activeClassName="active" to={item.path}>{item.text}</NavLink></li>)
                         }
                     </ul>
-                </nav>
+                </nav> */}
                 
                 <Switch>
                     
@@ -74,6 +76,8 @@ class App extends React.Component {
                     <Route path='/login' component={Login} />
                     <Route path='/potfoods' component={Potfoods} />
                     <Route path='/reg' component={Reg} />
+                    <Route path='/details' component={Details} />
+                    <Route path='/my' component={My} />
                     <Route path="/notfound" render={() => <div>404</div>} />
                     <Redirect from='/' to='/home' exact />
                     <Redirect to="/notfound" />

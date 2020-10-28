@@ -1,15 +1,22 @@
 import React from 'react';
 
-import {withAuth, withUser} from '../../utils/hoc'
+import { withAuth, withUser } from '../../utils/hoc'
+import request from '../../utils/request'
+import CakeMain from '../../components/Main/CakeMain'
+import HomeHead from '../../components/Head/HomeHead'
+import HomeTarbar from '@/components/Tarbar/HomeTarbar'
 
-// ES7的装饰器写法
-@withAuth
-class Cake extends React.Component{
+
+// @withUser
+class Cake extends React.Component {
     
-    render(){
-        return(
+    render() {
+        // console.log("Cake.Props",this.props);
+        return (
             <div>
-                Cake
+                <HomeHead {...this.props}/>
+                <CakeMain {...this.props}/>
+                <HomeTarbar />
             </div>
         )
     }

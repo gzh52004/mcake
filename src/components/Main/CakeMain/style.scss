@@ -1,7 +1,7 @@
 @import '@/assets/scss/common.scss';
 
 .main{
-    margin-top: vw(135);
+    margin-top: vw(134);
     // justify-content: space-evenly;
     padding: 0 0 0 vw(8);
     width: 100vw;
@@ -11,9 +11,10 @@
     display: flex;
     // flex-shrink: 0;
     flex-wrap: wrap;
+    align-content: flex-start;
     .content{
         width: vw(366);
-        // height: vw(352);
+        height: vw(500);
         box-sizing: border-box;
         padding: vw(7);
         .pic1{
@@ -38,7 +39,14 @@
             .protitle{
                 line-height: vw(24);
                 .title{
+                    display: inline-block;
                     font-weight: 700;
+                    width: vw(180);
+                    vertical-align: top;
+                    height: vw(24);
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
                 }
                 .clas{
                     background-color: yellow;
