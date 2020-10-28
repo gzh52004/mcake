@@ -1,10 +1,11 @@
 import React from 'react'
-// import { withAuth } from '../../utils/hoc';
+import { withUser,withAuth } from '../../../utils/hoc';
 
 import './style.scss'
-
+// console.log("withUser",withUser);
+// @withUser
 let HomeHead = function (props) {
-    // console.log('Home.props',props)
+    console.log('Home.props',props)
 
     return (
         <div className="header">
@@ -13,14 +14,14 @@ let HomeHead = function (props) {
                 <span className="text">北京市</span>
             </div>
             <div className="picture">
-                <img src="./img/cake.png" alt=""/>
+                <img src="./img/cake.png" alt="" onClick={()=>{props.history.push('/home')}}/>
             </div>
             <div className="search">
                 <span className="iconfont icon-sousuo"></span>
             </div>
             <span className="shuxian">|</span>
-            <div className="mine">
-                <span className="iconfont icon-toggle"></span>
+            <div className="mine" onClick={()=>{props.history.push('/my')}}>
+                <span className="iconfont icon-my"></span>
             </div>
         </div >
     )

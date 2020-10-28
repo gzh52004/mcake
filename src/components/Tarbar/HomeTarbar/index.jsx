@@ -1,6 +1,6 @@
 import React from 'react'
 // import {withAuth, withUser} from '@/utils/hoc'
-import { Route, Redirect, Switch, Link, NavLink, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 import './style.scss'
 
@@ -10,7 +10,6 @@ import Home from '@/views/Home'
 import Choiceness from '@/views/Choiceness'
 import Potfoods from '@/views/Potfoods'
 
-@withRouter
 class HomeTarbar extends React.Component {
     state = {
         menu: [{
@@ -23,40 +22,39 @@ class HomeTarbar extends React.Component {
             path: '/home',
             name: 'home',
             component: Home,
-            // icon: <HomeOutlined />
         },
         {
             text: '蛋糕',
             path: '/cake',
             name: 'cake',
             component: Cake
-        }, 
+        },
         {
             text: '小食',
             path: '/potfoods',
             name: 'potfoods',
             component: Potfoods,
-            // icon: <FastForwardOutlined />
         }, {
             text: '购物车',
             path: '/cart',
             name: 'cart',
             component: Cart,
-            // icon:ShoppingCartOutlined
         }],
     }
-    render(){
-        const{ menu } = this.state;
+    render() {
+        const { menu } = this.state;
         console.log(menu);
-        <div>
-            <nav>
-                <ul className="tarbar">
-                    {
-                        menu.map(item=><li key={item.name}> <NavLink activeClassName="active" to={item.path}>{item.text}</NavLink></li>)
-                    }
-                </ul>
-            </nav>
-        </div>
+        return (
+            <div>
+                <nav>
+                    <ul className="tarbar">
+                        {
+                            menu.map(item => <li key={item.name}> <NavLink activeClassName="active" to={item.path}>{item.text}</NavLink></li>)
+                        }
+                    </ul>
+                </nav>
+            </div>
+        )
     }
 }
 export default HomeTarbar

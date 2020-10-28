@@ -2,21 +2,18 @@ import React from 'react';
 
 import {withAuth, withUser} from '../../utils/hoc'
 import HomeHead from '@/components/Head/HomeHead'
-import HomeMain from '@/components/Main/HomeMain'
 import HomeTarbar from '@/components/Tarbar/HomeTarbar'
 
-// console.log(HomeTarbar);
 
 // ES7的装饰器写法
-// @withAuth
+// @withUser
 class Home extends React.Component{
     
     render(){
         return(
             <div>
-                <HomeHead />
-                <HomeMain />
-                {/* <HomeTarbar /> */}
+                <HomeHead {...this.props} />
+                <HomeTarbar />
             </div>
         )
     }

@@ -1,15 +1,21 @@
 import React from 'react';
-
+import HomeHead from '../../components/Head/HomeHead';
+import PotfoodsMain from '../../components/Main/PotfoodsMain'
+import HomeTarbar from '@/components/Tarbar/HomeTarbar'
 import {withAuth, withUser} from '../../utils/hoc'
 
+
 // ES7的装饰器写法
-@withAuth
+// @withAuth
 class Potfoods extends React.Component{
     
     render(){
+        console.log("Potfoods.props",this.props);
         return(
             <div>
-                Potfoods
+                <HomeHead {...this.props}/>
+                <PotfoodsMain {...this.props}/>
+                <HomeTarbar />
             </div>
         )
     }

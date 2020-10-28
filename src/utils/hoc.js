@@ -3,34 +3,12 @@
     * 高阶组件是一个函数
     * 高阶组件的参数为React组件
     * 高阶组件必须返回一个新的组件
- */
+    */
 import React from 'react';
 import {Redirect} from 'react-router-dom';
 
 export function withUser(MyComponent){
-    // return class OuterComponent extends React.Component{
-        // constructor(props){
-        //     super(props);
-        //     this.state = {
-        //         userInfo:{}
-        //     }
-        // }
-        // componentDidMount(){
-        //     let userInfo = localStorage.getItem('userInfo');
-        //     try{
-        //         userInfo = JSON.parse(userInfo)
-        //     }catch(err){
-        //         userInfo = {}
-        //     }
-
-        //     this.setState({
-        //         userInfo
-        //     })
-        // }
-        // render(){
-        //     return <MyComponent {...this.props} userInfo={this.state.userInfo}>
-        // }
-    // }
+    
     return function OuterComponent(props){
         // console.log('withUser.OuterComponent.props',props)
         // 获取本地存储信息
@@ -40,12 +18,10 @@ export function withUser(MyComponent){
         }catch(err){
             currentUser = {}
         }
-        console.log('withUser.currentUser',currentUser);
+        // console.log('withUser.currentUser',currentUser);
         return <MyComponent {...props} currentUser={currentUser} />
     }
- }
-
-
+}
 //  用户访问权限高阶组件
 // 需要用户登录后才可访问组件否则跳到登录页面
 export function withAuth(InnerComponent){
@@ -65,6 +41,32 @@ export function withAuth(InnerComponent){
             // }
         }
     }
+    return OuterComponent
+}
+// return class OuterComponent extends React.Component{
+    //         constructor(props){
+    //             super(props);
+    //             this.state = {
+    //                 userInfo:{}
+    //             }
+    //         }
+    //         componentDidMount(){
+    //             let userInfo = localStorage.getItem('userInfo');
+    //             try{
+    //                 userInfo = JSON.parse(userInfo)
+    //             }catch(err){
+    //                 userInfo = {}
+    //             }
+    
+    //             this.setState({
+    //                 userInfo
+    //             })
+    //         }
+    //         render(){
+    //             return <MyComponent {...this.props} userInfo={this.state.userInfo} />
+    //         }
+    // }
+
 
     // 反向继承：这种写法只能适用于类组件
     // class OuterComponent extends InnerComponent{
@@ -81,5 +83,3 @@ export function withAuth(InnerComponent){
     //     }
     // }
     // return withUser(OuterComponent);
-    return OuterComponent
-}
