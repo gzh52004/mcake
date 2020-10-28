@@ -1,9 +1,4 @@
-// @import "../../assets/sass/public/vw.scss";
-// @import "../../assets/sass/common/base.css";
-@function vw($n) {
-  // 如果效果图是750，就除以750;
-  @return ($n * 100 / 750) + vw;
-}
+@import '../../assets/scss/common.scss';
 
   * {
     margin: 0;
@@ -68,11 +63,13 @@
       width: 100%;
       height: 80vh;
       display: flex;
+      margin-top: vw(126);
       .Format {
         width: 100%;
         margin-top: vw(15);
         
         h4 {
+          margin-top: vw(20);
           line-height: vw(50);
           position: relative;
           left: vw(40);
@@ -102,6 +99,7 @@
           input {
             width: vw(700);
             height: vw(94);
+            font-size: vw(30);
             border-radius: vw(25);
             background-color:#ededed;
             border: none;
@@ -134,6 +132,9 @@
           font-size: vw(14);
           color:#8D8D8D;
           padding-top: vw(100);
+          p {
+            line-height: vw(50);
+          }
           img {
             width: vw(75);
             height: vw(75);

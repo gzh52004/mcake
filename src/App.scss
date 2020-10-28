@@ -1,6 +1,10 @@
 @import './assets/scss/common.scss';
 
 $mainColor:black;
+ * {
+    overflow: hidden;
+    // box-sizing: border-box;
+}
 .active{
     color:$mainColor;
     // font-size: vw(40);

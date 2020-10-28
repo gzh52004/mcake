@@ -7,32 +7,32 @@ a {
   text-decoration: none;
 }
 
-.login {
+.reg {
   width: 100vw;
   height: 80vh;
   box-sizing: border-box;
 }
 
-.login .main {
+.reg .main {
   width: 100%;
   height: 80vh;
   display: flex;
   margin-top: 16.8vw;
 }
 
-.login .main .Format {
+.reg .main .Format {
   width: 100%;
   margin-top: 2vw;
 }
 
-.login .main .Format h4 {
+.reg .main .Format h4 {
   margin-top: 2.66667vw;
   line-height: 6.66667vw;
   position: relative;
   left: 5.33333vw;
 }
 
-.login .main .Format .mainInput {
+.reg .main .Format .mainInput {
   width: 100vw;
   margin: 4vw 0;
   display: flex;
@@ -40,19 +40,19 @@ a {
   position: relative;
 }
 
-.login .main .Format .mainInput img {
+.reg .main .Format .mainInput img {
   position: absolute;
   left: 6.66667vw;
   top: 0.66667vw;
 }
 
-.login .main .Format .mainInput .mainInput_lock {
+.reg .main .Format .mainInput .mainInput_lock {
   position: absolute;
   left: 6.66667vw;
   top: 1.86667vw;
 }
 
-.login .main .Format .mainInput input {
+.reg .main .Format .mainInput input {
   width: 93.33333vw;
   height: 12.53333vw;
   border-radius: 3.33333vw;
@@ -62,7 +62,7 @@ a {
   outline: none;
 }
 
-.login .main .Format .mainReg {
+.reg .main .Format .mainReg {
   width: 46.66667vw;
   margin: auto;
   font-size: 3.6vw;
@@ -74,33 +74,33 @@ a {
   text-align: center;
 }
 
-.login .main .Format .mainReg span {
+.reg .main .Format .mainReg span {
   flex: 1;
 }
 
-.login .main .Format .mainReg h6 {
+.reg .main .Format .mainReg h6 {
   flex: 2;
   color: #8D8D8D;
 }
 
-.login .main .Format .mainOther {
+.reg .main .Format .mainOther {
   text-align: center;
   font-size: 1.86667vw;
   color: #8D8D8D;
   padding-top: 13.33333vw;
 }
 
-.login .main .Format .mainOther p {
+.reg .main .Format .mainOther p {
   line-height: 6.66667vw;
 }
 
-.login .main .Format .mainOther img {
+.reg .main .Format .mainOther img {
   width: 10vw;
   height: 10vw;
   margin: 0.66667vw;
 }
 
-.login .main .Format .loginBtn {
+.reg .main .Format .loginBtn {
   width: 80vw;
   height: 10.66667vw;
   background: #ffe32a;
@@ -114,6 +114,6 @@ a {
   align-items: center;
 }
 
-.login .WhiteSpace {
+.reg .WhiteSpace {
   height: 100%;
 }

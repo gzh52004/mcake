@@ -61,7 +61,7 @@ class BasicInputExample extends React.Component {
 
                         {/* 注册|忘记密码 */}
                         <div className="mainReg">
-                            <NavLink to=''>
+                            <NavLink to='/reg'>
                                 <h6>立即注册</h6>
                             </NavLink>
                             <span>|</span>
