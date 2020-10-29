@@ -1,8 +1,9 @@
 import React from 'react';
 
-import {withAuth, withUser} from '../../utils/hoc'
+// import {withAuth, withUser} from '../../utils/hoc'
 import HomeHead from '@/components/Head/HomeHead'
 import HomeTarbar from '@/components/Tarbar/HomeTarbar'
+import HomeMain from '@/components/Main/HomeMain'
 
 
 // ES7的装饰器写法
@@ -13,7 +14,8 @@ class Home extends React.Component{
         return(
             <div>
                 <HomeHead {...this.props} />
-                <HomeTarbar />
+                <HomeMain />
+                {/* <HomeTarbar /> */}
             </div>
         )
     }

@@ -14,6 +14,8 @@ import Potfoods from './views/Potfoods'
 import Reg from './views/Reg'
 import Details from './views/Details'
 import My from './views/My'
+
+import 'antd-mobile/dist/antd-mobile.css';
 import './App.scss'
 import './assets/fonts/iconfont'
 
