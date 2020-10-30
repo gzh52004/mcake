@@ -12,6 +12,7 @@
     // flex-shrink: 0;
     flex-wrap: wrap;
     align-content: flex-start;
+    background-color: #fff;
     .content{
         width: vw(366);
         height: vw(500);
@@ -33,7 +34,7 @@
 
         .chidescribe{
             height: vw(85);
-            width: vw(243);
+            width: vw(267);
             overflow: hidden;
             padding-top: vw(20);
             .protitle{
@@ -56,7 +57,12 @@
             .describe{
                 color: rgb(194, 194, 194);
                 padding-top: vw(4);
+                height: vw(30);
             }
+        }
+        .price{
+            line-height: vw(24);
+            height: vw(38);
         }
         .cart{
             position: absolute;

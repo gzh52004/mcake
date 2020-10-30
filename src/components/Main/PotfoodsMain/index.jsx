@@ -68,7 +68,7 @@ class PotfoodsMain extends React.Component {
     render(){
         let { datalist } = this.state;
         return (
-            <div className="main" ref={el => this.contentNode = el}>
+            <div className="potmain" ref={el => this.contentNode = el}>
                 {
                     datalist.map((item) => {
                         return (

@@ -97,7 +97,6 @@ class CakeMain extends React.Component {
                             </div>
                         )
                     })
-
                 }
             </div>
         )
