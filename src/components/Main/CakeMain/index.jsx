@@ -57,7 +57,6 @@ class CakeMain extends React.Component {
         if (this.contentNode) {
             this.contentNode.addEventListener('scroll', this.onScrollHandle.bind(this));
         }
-        
     }
     componentWillUnmount() {
         // 页面销毁就取消这个监听

@@ -5,7 +5,6 @@ import HomeTarbar from '@/components/Tarbar/HomeTarbar'
 import {withAuth, withUser} from '../../utils/hoc'
 
 
-// ES7的装饰器写法
 // @withAuth
 class Potfoods extends React.Component{
     
@@ -15,7 +14,7 @@ class Potfoods extends React.Component{
             <div>
                 <HomeHead {...this.props}/>
                 <PotfoodsMain {...this.props}/>
-                <HomeTarbar />
+                <HomeTarbar {...this.props}  />
             </div>
         )
     }

@@ -7,7 +7,6 @@ import App from './App';
 render(
     <HashRouter>
         <App />
-        {/* <Route component={App}/> */}
     </HashRouter>
     ,
     document.getElementById('app')

@@ -1,5 +1,5 @@
 @import '@/assets/scss/common.scss';
-
+// @import '../../assets/fonts/iconfont.css';
 $mainColor:black;
 .active{
     color:$mainColor;
@@ -19,10 +19,61 @@ $mainColor:black;
         display: flex;
         justify-content: center;
         align-items: center;
-        // a{
-        //     width: 100%;
-        //     text-align: center;
-        //     border-right: vw(1) solid black;
-        // }
     }
+}
+.choiceness{
+    width: 50vw;
+    height: vw(1334);
+    background-color: #fff;
+    border-radius: vw(5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    .choice_content{
+        padding-top: vw(100);
+    }
+    .first_order{
+        padding: 0 vw(60) 0 vw(30);
+        height: vw(80);
+        line-height: vw(80);
+        // margin-top: vw(100);
+        font-size: vw(24);
+        border-bottom: 1px solid rgb(235, 234, 234);
+        .weibiao{
+            width: vw(40);
+            height: vw(40);
+            display: inline-block;
+            border-radius: 50%;
+            background-color: yellow;
+            line-height: vw(40);
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+    .am-accordion .am-accordion-item .am-accordion-header {
+        font-size: vw(24);
+    }
+    .am-list-item .am-list-line .am-list-content{
+        font-size: vw(24);
+        padding-top: vw(10);
+        padding-bottom: vw(10);
+        line-height: vw(60);
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+    }
+}
+.mask{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .5;
+    background: #000;
+    z-index: 9;
+}
+.display_none{
+    display: none;
 }
