@@ -2,7 +2,6 @@ import React from 'react';
 
 import {withAuth, withUser} from '../../utils/hoc'
 
-// ES7的装饰器写法
 @withUser
 class Details extends React.Component{
     

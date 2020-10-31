@@ -49,7 +49,9 @@ class HomeMain extends React.Component {
         let lovely = this.state.lovely
         return (
             <div className="homemain">
+                {/* 轮播图 */}
                 <Carousal />
+                {/* 本季推荐 */}
                 <div className="home">
                     <div className="home_item">
                         <img src="./img/home/icon_cj.png" alt="" />
@@ -97,6 +99,7 @@ class HomeMain extends React.Component {
                         })
                     }
                 </div>
+                {/* 人气推荐 */}
                 <div className="home">
                     <div className="home_item">
                         <img src="./img/home/icon_cj.png" alt="" />
@@ -144,6 +147,7 @@ class HomeMain extends React.Component {
                         })
                     }
                 </div>
+                {/* 萌系推荐 */}
                 <div className="home">
                     <div className="home_item">
                         <img src="./img/home/icon_cj.png" alt="" />

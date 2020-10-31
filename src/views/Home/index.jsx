@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import {withAuth, withUser} from '../../utils/hoc'
 import HomeHead from '@/components/Head/HomeHead'
 import HomeMain from '@/components/Main/HomeMain'
 import HomeTarbar from '@/components/Tarbar/HomeTarbar'
@@ -15,7 +14,7 @@ class Home extends React.Component{
             <div>
                 <HomeHead {...this.props} />
                 <HomeMain />
-                <HomeTarbar />
+                <HomeTarbar {...this.props}  />
             </div>
         )
     }

@@ -16,7 +16,7 @@ class Cake extends React.Component {
             <div>
                 <HomeHead {...this.props}/>
                 <CakeMain {...this.props}/>
-                <HomeTarbar />
+                <HomeTarbar {...this.props} />
             </div>
         )
     }

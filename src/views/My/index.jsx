@@ -1,6 +1,6 @@
 import React from 'react';
-import { Toast, WhiteSpace, WingBlank, Button } from 'antd-mobile';
-import {withAuth, withUser} from '../../utils/hoc'
+import { ActionSheet, WingBlank, WhiteSpace, Button, Toast } from 'antd-mobile';
+import { withAuth, withUser } from '../../utils/hoc'
 
 import './style.scss';
 import Header from '../../components/Head/LoginHead';
@@ -39,4 +39,5 @@ class My extends React.Component{
         )
     }
 }
+
 export default My;
