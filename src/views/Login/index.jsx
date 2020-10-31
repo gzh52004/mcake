@@ -1,4 +1,5 @@
 import React from 'react';
+import CryptoJS, { RC4Drop } from 'crypto-js'
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import { List, InputItem, WhiteSpace, Icon, Grid, } from 'antd-mobile';
 import { createForm } from 'rc-form';
@@ -7,54 +8,108 @@ import './style.scss';
 import Header from '../../components/Head/LoginHead';
 
 import { withAuth, withUser } from '../../utils/hoc';
+import request from '../../utils/request';
 
 // ES7的装饰器写法
 @withAuth
 class BasicInputExample extends React.Component {
     componentDidMount() {
+        // JSON.parse(localStorage.getItem('currentUser')).user.createUser
         // this.autoFocusInst.focus();
+
     }
-    // handleClick = () => {
-    // this.inputRef.focus();
-    // }
+    constructor()
+    {
+        super()
+        this.state = {//初始化数据
+            phone: '请输入您的手机号码',
+            password: '请输入您的密码',
+            phoneIsok:false,
+        }
+    }
+
+    //获取手机号码数据
+    handleSubmit = e => {
+        e.preventDefault();
+        const changePhone = this.phone.state.value;
+        // console.log("reg",changePhone); 
+    }
+    // 获取密码数据
+    handleSubmit = e => {
+        e.preventDefault();
+        let changepassword = this.password.state.value;
+        // console.log("reg",changepassword); 
+    }
+
+// 验证用户名
+    checkPhone = () => {
+        var phone = this.phone.state.value.replace(/\s*/g, "");//去除空格
+        let reg = /^(13[0-9]|14[0-9]|15[0-9]|166|17[0-9]|18[0-9]|19[8|9])\d{8}$/;
+        if (!reg.test(phone)) {//判断手机正则
+            this.state.phoneIsok=false
+            alert('请填写正确的手机号码');
+        } else{
+            this.state.phoneIsok=true
+        }
+    }
+
+    checkPassword = () => {
+        console.log(phone)
+        // var phone = this.phone.state.value.replace(/\s*/g, "")
+
+
+        if(phone === "") {
+            alert('密码不能为空')
+            console.log(phone,666)
+        }
+    }
+
+
+
+// 验证用户登录
+    goLogin = () => {
+        console.log(this)
+    //验证手机号码正则和是否可注册
+        if(this.state.phoneIsok) {
+            let password = this.password.state.value;
+            
+            this.password = CryptoJS.SHA256(this.password).toString();
+            console.log(this.password.state.value,this.phone.state.value,66)
+            request.get('user/login',{
+                // params: {
+                    // name:this.phone.state.value,
+                    // password:this.password.state.value,
+                // }
+            })
+        }
+    }
+
+
     render() {
         const { getFieldProps } = this.props.form;
         return (
             <div className="login">
                 {/* 顶部 */}
                 <Header />
-                {/* <div className="header">
-            <NavLink className="headerLeft" to="" >
-              <Icon className="headerLeft_ico" type="left" size={ 'lg' } />
-            </NavLink>
-            <NavLink className="headerCentre" to="" >
-              <img className="headerLeft_img" src="../img/login/header_log.png" />
-            </NavLink>
-            <div className="headerRight">
-              <NavLink to="">
-                <img src="../img/login/header_cart.png" />
-              </NavLink>
-              <span>|</span>
-              <NavLink to=''>
-                <img src="../img/login/header_mine.png" />
-              </NavLink>
-            </div>
-          </div> */}
-
 
                 <div className="main">
                     <List className="Format" renderHeader={() => ' '}>
                         <h4>欢迎登录Mcake</h4>
 
 
-                        <InputItem className="mainInput"{...getFieldProps('phone')} type="phone" placeholder="请输入手机号码"
+                        <InputItem className="mainInput"{...getFieldProps('phone')} type="phone" 
+                        placeholder={this.state.phone}
+                        onBlur={this.checkPhone}
+                        ref={el => this.phone = el}
                         >
                             <img className="mainInput_phone" src="../img/login/login_phone.png" />
                         </InputItem>
                         <InputItem className="mainInput"
                             {...getFieldProps('password')}
                             type="password"
-                            placeholder="请输入密码"
+                            placeholder={this.state.password}
+                            onBlur={this.checkPassword}
+                            ref={el => this.password = el}
                         >
                             <img className="mainInput_lock" src="../img/login/login_lock1.png" />
                         </InputItem>
@@ -80,7 +135,7 @@ class BasicInputExample extends React.Component {
                         </div>
 
                         {/* 登录按钮 */}
-                        <div className="loginBtn">
+                        <div className="loginBtn" onClick={this.goLogin}>
                             <span>立即登录</span>
                         </div>
 
