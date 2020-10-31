@@ -24,6 +24,7 @@ $mainColor:black;
 .choiceness{
     width: 50vw;
     height: vw(1334);
+    overflow-y: scroll;
     background-color: #fff;
     border-radius: vw(5);
     position: absolute;
@@ -32,6 +33,9 @@ $mainColor:black;
     z-index: 10;
     .choice_content{
         padding-top: vw(100);
+    }
+    .text{
+        padding-left: vw(30);
     }
     .first_order{
         padding: 0 vw(60) 0 vw(30);

@@ -6,6 +6,111 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "179390",
+      "name": "水果",
+      "font_class": "shuiguo",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "346627",
+      "name": "儿童",
+      "font_class": "ertong",
+      "unicode": "e6b1",
+      "unicode_decimal": 59057
+    },
+    {
+      "icon_id": "583729",
+      "name": "聚会",
+      "font_class": "080juhui",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "920138",
+      "name": "奶油",
+      "font_class": "chudiansuannai",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "1364783",
+      "name": "情侣",
+      "font_class": "qinglv",
+      "unicode": "e6fe",
+      "unicode_decimal": 59134
+    },
+    {
+      "icon_id": "5060338",
+      "name": "蛋糕",
+      "font_class": "dangao",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "5073187",
+      "name": "巧克力",
+      "font_class": "qiaokeli",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "5171341",
+      "name": "慕斯杯",
+      "font_class": "icon-test",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "5193959",
+      "name": "坚果",
+      "font_class": "jianguo",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "6461031",
+      "name": "下午茶",
+      "font_class": "xiawucha",
+      "unicode": "e6a0",
+      "unicode_decimal": 59040
+    },
+    {
+      "icon_id": "8415266",
+      "name": "情侣",
+      "font_class": "qinglv1",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "11031185",
+      "name": "芝士",
+      "font_class": "zhishi",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "12437188",
+      "name": "生日",
+      "font_class": "shengrix",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "12575789",
+      "name": "长辈",
+      "font_class": "changbei",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "14851362",
+      "name": "咖啡豆",
+      "font_class": "kafeidou",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
       "icon_id": "12014853",
       "name": "我 的",
       "font_class": "my",
