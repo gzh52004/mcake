@@ -2,30 +2,39 @@ import React from 'react';
 import { Toast, WhiteSpace, WingBlank, Button } from 'antd-mobile';
 import {withAuth, withUser} from '../../utils/hoc'
 
-function successToast() {
-    Toast.success('Load success !!!', 1);
-  }
-  function failToast() {
-    Toast.fail('Load failed !!!', 1);
-  }
+import './style.scss';
+import Header from '../../components/Head/LoginHead';
+import { NavLink } from 'react-router-dom';
+
+
 // ES7的装饰器写法
 @withAuth
 class My extends React.Component{
     componentDidMount() {
-        Toast.loading('Loading...', 30, () => {
-          console.log('Load complete !!!');
-        });
-    
-        setTimeout(() => {
-          Toast.hide();
-        }, 3000);
+      console.log(this)
       }
+      
     render(){
         return(
-            <div>
-                My
-                <Button onClick={successToast}>success</Button>
-                <Button onClick={failToast}>fail</Button>
+            <div className="my">
+              {/* 顶部 */}
+              <Header />
+              <div className="main">
+                <div className="topheader">
+                  <div className="mainContent">
+                    <div className="ico">
+                      <span className="iconfont icon-my">
+                        </span>
+                    </div>
+                    <div className="text">
+                    <p className="id"> 
+                      {this.props.currentUser[0]}
+                    </p>
+                    <NavLink to="/login" className="change">切换账号</NavLink>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
         )
     }
