@@ -32,13 +32,18 @@ export function withAuth(InnerComponent){
         render(){
             // console.log('withAuth.props',this.props)
             const {currentUser,location:{pathname}} = this.props;
-            return <InnerComponent {...this.props} />
-            // if(currentUser){
-            //      // 用户登录后显示内容
-            //     return <InnerComponent {...this.props} />
-            // }else{
-            //     return <Redirect to={"/login?targetUrl="+pathname} />
-            // }
+            // return <InnerComponent {...this.props} />
+            // return <Redirect to="/login" />
+            // console.log(currentUser,pathname)
+            
+            if(currentUser){
+                 // 用户登录后显示内容
+                return <InnerComponent {...this.props} />
+            }else{
+                console.log("已经进行跳转");
+                // return <Redirect to={"/login?targetUrl="+pathname} />
+                return <Redirect to="/login" />
+                }
         }
     }
     return OuterComponent

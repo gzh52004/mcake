@@ -18,7 +18,7 @@ import request from '../../utils/request';
 //   }
 
 // ES7的装饰器写法
-@withAuth
+// @withAuth
 class BasicInputExample extends React.Component {
 
     constructor()
@@ -189,7 +189,7 @@ class BasicInputExample extends React.Component {
             })
         }
         else {
-            alert('手机号码或密码不符合规范，请重新输入');
+            alert('手机号码或验证码或密码不符合规范，请重新输入');
             return;
         }
     }

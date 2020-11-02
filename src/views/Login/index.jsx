@@ -7,11 +7,11 @@ import { createForm } from 'rc-form';
 import './style.scss';
 import Header from '../../components/Head/LoginHead';
 
-import { withAuth, withUser } from '../../utils/hoc';
+// import { withAuth, withUser } from '../../utils/hoc';
 import request from '../../utils/request';
 
 // ES7的装饰器写法
-@withAuth
+// @withAuth
 class BasicInputExample extends React.Component {
     componentDidMount() {
         // JSON.parse(localStorage.getItem('currentUser')).user.createUser
@@ -99,22 +99,26 @@ class BasicInputExample extends React.Component {
     //验证号码密码是否正确
         if(phone && password && phoneIsok && pasIsok) {
             password = CryptoJS.SHA256(password).toString();
-            alert('登录成功')
+            
+            // alert('登录成功')
             request.get('user/login',{
                 params: {
                     name:phone,
                     password:password
                 }
+
             }).then(res=>{
                 if(res.data.code){
-                    console.log(111,res.data.code);
-                    this.props.history.push({//注册成功后跳转页面并传参
-                        pathname:'/home',
+                    console.log('登录成功')
+                    // console.log(111,res.data.code);
+                    this.props.history.push({//登录成功后跳转页面并传参
+                        pathname:'/my',
                         query: { username:phone}
                     })
-                    localStorage.setItem('currentUser',JSON.stringify([phone,password]))//将用户信息存储
+                    localStorage.setItem('currentUser',JSON.stringify({'username':phone,'password':password}))
+                    // localStorage.setItem('currentUser',JSON.stringify({'username':phone,'password':password}))//将用户信息存储
                 } else {
-                    console.log(222,res.data.code)
+                    // console.log(222,res.data.code)
                     alert('手机号码或者密码错误');
                 }
             
