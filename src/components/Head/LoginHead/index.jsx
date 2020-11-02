@@ -23,7 +23,7 @@ class Header extends React.Component{
               <img src="../img/LoginHead/header_cart.png" />
             </NavLink>
             <span>|</span>
-            <NavLink to=''>
+            <NavLink to='/my'>
               <img src="../img/LoginHead/header_mine.png" />
             </NavLink>
           </div>

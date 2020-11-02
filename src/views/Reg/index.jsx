@@ -18,7 +18,7 @@ import request from '../../utils/request';
 //   }
 
 // ES7的装饰器写法
-@withAuth
+// @withAuth
 class BasicInputExample extends React.Component {
 
     constructor()
@@ -94,6 +94,9 @@ class BasicInputExample extends React.Component {
                 textIsok: true
             })
         } else {
+            this.setState({
+                textIsok: false
+            })
             alert('请填写正确的验证码');
         }
     }
@@ -152,31 +155,41 @@ class BasicInputExample extends React.Component {
 
     // 当所有信息都通过后进行密码加密并且提交信息
     checkReg = () => {
+        let phone = this.phone.state.value.replace(/\s*/g, "");
+        let password = this.password.state.value.replace(/\s*/g, "");
+        let phoneIsok = this.state.phoneIsok;
+        let textIsok = this.state.textIsok;
+        let passwordIsok = this.state.passwordIsok;
+        let pasConfirmIsok = this.state.pasConfirmIsok;
+        let value = this.state.value;
+        console.log(phone,password,phoneIsok,textIsok,passwordIsok,pasConfirmIsok,value)
+
         if(this.state.value === false) {
             alert('请勾选协议')
         } else if(this.state.phoneIsok && this.state.textIsok && this.state.passwordIsok && this.state.pasConfirmIsok && this.state.value) {
-            // console.log(this.password)
-            this.name = this.phone.state.value.replace(/\s*/g, "")
-            // console.log(this.name)
-            this.password = CryptoJS.SHA256(this.password).toString();
-            // console.log('加密后=', this.password);
+            // console.log(this)
+            phone = this.phone.state.value.replace(/\s*/g, "")
+            password = CryptoJS.SHA256(password).toString();
+            console.log(password)
+
             // 当所有检验通过后向数据库添加用户信息
-            request.post('user/regist',"name=" + this.name + "&password=" + this.password
+            request.post('user/regist',"name=" + phone + "&password=" + password
             ).then(res=>{
+                
                 if(res.data.code === 1){
                     alert('注册成功');
                     this.props.history.push({//注册成功后跳转页面并传参
                         pathname:'/login',
-                        query: { username:this.name}
+                        query: { username:phone}
                     })
-                    localStorage.setItem('currentUser',JSON.stringify(this.name))//将用户信息存储
+                    localStorage.setItem('currentUser',JSON.stringify(phone))//将用户信息存储
                 } else{
                     alert('该号码已被注册，请重新填写');
                 }
             })
         }
         else {
-            alert('手机号码或密码不符合规范，请重新输入');
+            alert('手机号码或验证码或密码不符合规范，请重新输入');
             return;
         }
     }
